@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YT Publisher - YouTube Scheduling & AI Metadata Automation</title>
+    <meta name="description" content="Organize videos, generate viral metadata with Gemini AI, and schedule automated publishing on YouTube. Open-source, self-hosted, and secure.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar-container">
+        <nav class="navbar" id="navbar">
+            <div class="nav-logo">
+                <img src="assets/Gemini_Generated_Image_sib3l9sib3l9sib3.png" alt="YT Publisher Logo" class="logo-img">
+                <span class="logo-text">YT PUBLISHER</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active" id="link-home">Home</a></li>
+                <li><a href="#features" class="nav-link" id="link-features">Features</a></li>
+                <li><a href="#how-to-use" class="nav-link" id="link-use">How to Use</a></li>
+                <li><a href="privacy.html" class="nav-link" id="link-privacy">Privacy & Rules</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="#how-to-use" class="btn btn-primary btn-sm">Get Started</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge">Next-Gen Creator Suite</span>
+                    <h1>Automate Your YouTube Uploads With <span class="gradient-text">Gemini AI</span></h1>
+                    <p class="lead">Import videos in bulk, auto-generate SEO-optimized metadata, and publish content on a calendar schedule safely via the official YouTube API.</p>
+                    <div class="hero-actions">
+                        <a href="https://drive.google.com/file/d/1zyiqttEYx2n12Xcx6l-mSjVEwH_98gvE/view?usp=drivesdk" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                            <span class="material-icons-round btn-icon">download</span> Download App
+                        </a>
+                        <a href="#features" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <div class="glass-card mockup-card">
+                        <img src="assets/images/ef848f8959f15e4315b62325ba00d4bd.jpg" alt="YT Publisher Dashboard Preview" class="mockup-img" id="mockup-preview">
+                        <div class="glow-effect"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Showcase Section -->
+        <section id="dashboard-showcase" class="showcase-section">
+            <div class="container showcase-container">
+                <div class="showcase-image-wrapper">
+                    <div class="glass-card showcase-card">
+                        <img src="assets/images/Screenshot%202026-06-23%20140153.png" alt="YT Publisher Dashboard Simulator Screenshot" class="showcase-img" id="showcase-preview-img">
+                        <div class="glow-effect"></div>
+                    </div>
+                </div>
+                <div class="showcase-content">
+                    <span class="badge badge-purple">Interactive Console</span>
+                    <h2>Explore the <span class="gradient-text">Creator Dashboard</span></h2>
+                    <p class="lead">The dashboard provides an intuitive, high-performance center where you can manage your uploading pipeline and keep track of your publishing statistics.</p>
+                    
+                    <div class="showcase-details">
+                        <div class="detail-item">
+                            <div class="detail-icon-box">
+                                <span class="material-icons-round">insights</span>
+                            </div>
+                            <div class="detail-text">
+                                <h4>Real-Time Overview Metrics</h4>
+                                <p>Monitor video metrics at a glance: **Uploaded** counts (videos backed up in Drive/Cloud), **Scheduled** counts (videos mapped to dates), **Published** counts (videos live on YouTube), and **Remaining** queue items.</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon-box">
+                                <span class="material-icons-round">bolt</span>
+                            </div>
+                            <div class="detail-text">
+                                <h4>Quick Action Automation</h4>
+                                <p>Take action instantly: Click **Import Videos** to load clips into your library, **Apply Schedule** to distribute your publishing calendar, and **Start Upload** to initiate queue transfers immediately.</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon-box">
+                                <span class="material-icons-round">explore</span>
+                            </div>
+                            <div class="detail-text">
+                                <h4>Unified Navigation System</h4>
+                                <p>Switch between views using the sticky bottom menu: navigate from the **Library** (bulk importer) to **Schedule** (calendar configuration), **Queue** (reorder list status), and **Profile** (API configurations and sign-in).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Powerful Features for Power Creators</h2>
+                    <p>Designed to save hours of manual video description formatting and scheduling work daily.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card glass-card" id="feat-1">
+                        <div class="feature-icon-wrapper">
+                            <span class="material-icons-round icon-red">cloud_upload</span>
+                        </div>
+                        <h3>Bulk Video Import</h3>
+                        <p>Drag and drop multiple video files, select a folder, or batch import clips instantly with full size and metadata pre-checks.</p>
+                    </div>
+                    <div class="feature-card glass-card" id="feat-2">
+                        <div class="feature-icon-wrapper">
+                            <span class="material-icons-round icon-blue">psychology</span>
+                        </div>
+                        <h3>Gemini AI Content Engine</h3>
+                        <p>Upload video files to Gemini for automatic deep visual analysis. Generate SEO titles, structured descriptions, tags, and suggested thumbnail texts.</p>
+                    </div>
+                    <div class="feature-card glass-card" id="feat-3">
+                        <div class="feature-icon-wrapper">
+                            <span class="material-icons-round icon-purple">calendar_today</span>
+                        </div>
+                        <h3>Smart Auto-Scheduling</h3>
+                        <p>Distribute uploads up to 90 days out. Set standard intervals (daily/weekly) or create custom upload cadences and publish slots.</p>
+                    </div>
+                    <div class="feature-card glass-card" id="feat-4">
+                        <div class="feature-icon-wrapper">
+                            <span class="material-icons-round icon-green">lock</span>
+                        </div>
+                        <h3>Google OAuth Secure Auth</h3>
+                        <p>Log in securely using Google OAuth directly on your device. Authenticate and upload to YouTube and back up to Google Drive without leaving the app.</p>
+                    </div>
+                    <div class="feature-card glass-card" id="feat-5">
+                        <div class="feature-icon-wrapper">
+                            <span class="material-icons-round icon-yellow">cloud_sync</span>
+                        </div>
+                        <h3>Multi-Device Sync</h3>
+                        <p>Dual-write architecture mirrors configurations securely to Firebase Firestore, allowing real-time dashboard status tracking across devices.</p>
+                    </div>
+                    <div class="feature-card glass-card" id="feat-6">
+                        <div class="feature-icon-wrapper">
+                            <span class="material-icons-round icon-red">video_settings</span>
+                        </div>
+                        <h3>Landscape Shorts Transcoder</h3>
+                        <p>Videos under 60 seconds detected as landscape are automatically transcoded to square (1:1 aspect ratio) with black borders via FFmpeg before publishing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How To Use / Interactive App Tour Section -->
+        <section id="how-to-use" class="tour-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Interactive App Tour & Guide</h2>
+                    <p>Click through the tabs below to explore every screen of the YT Publisher app and learn how to use its features.</p>
+                </div>
+                
+                <!-- Tab Buttons -->
+                <div class="tour-tabs-container">
+                    <div class="tour-tabs">
+                        <button class="tab-btn active" data-tab="dashboard">
+                            <span class="material-icons-round tab-icon">dashboard</span>
+                            Creator Dashboard
+                        </button>
+                        <button class="tab-btn" data-tab="library">
+                            <span class="material-icons-round tab-icon">video_library</span>
+                            Video Library
+                        </button>
+                        <button class="tab-btn" data-tab="metadata">
+                            <span class="material-icons-round tab-icon">psychology</span>
+                            AI Metadata
+                        </button>
+                        <button class="tab-btn" data-tab="schedule">
+                            <span class="material-icons-round tab-icon">calendar_month</span>
+                            Smart Scheduling
+                        </button>
+                        <button class="tab-btn" data-tab="queue">
+                            <span class="material-icons-round tab-icon">cloud_queue</span>
+                            Upload Queue
+                        </button>
+                        <button class="tab-btn" data-tab="profile">
+                            <span class="material-icons-round tab-icon">account_circle</span>
+                            Creator Profile
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tab Panes -->
+                <div class="tour-panes">
+                    <!-- Tab Pane 0: Creator Dashboard -->
+                    <div class="tour-pane active" id="pane-dashboard">
+                        <div class="pane-grid">
+                            <div class="pane-image-wrapper">
+                                <div class="glass-card pane-card">
+                                    <img src="assets/images/Screenshot%202026-06-23%20140153.png" alt="Creator Dashboard Screen" class="pane-img">
+                                    <div class="glow-effect"></div>
+                                </div>
+                            </div>
+                            <div class="pane-content">
+                                <h3>Creator Command Center</h3>
+                                <p class="lead">The **Dashboard** is the app's central hub. It provides real-time statistics of your channel publishing queue and quick action buttons to automate workflows.</p>
+                                
+                                <div class="guide-steps">
+                                    <div class="step-card">
+                                        <span class="step-num">1</span>
+                                        <div>
+                                            <h5>Overview Metrics</h5>
+                                            <p>Monitor status counts: **Uploaded** (videos backed up in the cloud), **Scheduled** (queued with release dates), **Published** (live on YouTube), and **Remaining** queue items.</p>
+                                        </div>
+                                    </div>
+                                    <div class="step-card">
+                                        <span class="step-num">2</span>
+                                        <div>
+                                            <h5>Trigger Quick Actions</h5>
+                                            <p>Click **Import Videos** to load new MP4 files, **Apply Schedule** to set post times, or **Start Upload** to force sync the queue immediately.</p>
+                                        </div>
+                                    </div>
+                                    <div class="step-card">
+                                        <span class="step-num">3</span>
+                                        <div>
+                                            <h5>Interactive Preview</h5>
+                                            <p>View active uploads, progress bars, and custom thumbnail previews directly on your dashboard widget cards.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab Pane 1: Video Library -->
+                    <div class="tour-pane" id="pane-library">
+                        <div class="pane-grid">
+                            <div class="pane-image-wrapper">
+                                <div class="glass-card pane-card">
+                                    <img src="assets/images/Screenshot%202026-06-22%20193754.png" alt="Video Library Screen" class="pane-img">
+                                    <div class="glow-effect"></div>
+                                </div>
+                            </div>
+                            <div class="pane-content">
+                                <h3>Manage Your Video Catalog</h3>
+                                <p class="lead">The **Video Library** serves as your local media vault. It keeps track of raw MP4 uploads and displays key properties at a glance.</p>
+                                
+                                <div class="guide-steps">
+                                    <div class="step-card">
+                                        <span class="step-num">1</span>
+                                        <div>
+                                            <h5>Import Clips</h5>
+                                            <p>Click the **"+" icon** in the top right to import one or multiple video files from your hard drive.</p>
+                                        </div>
+                                    </div>
+                                    <div class="step-card">
+                                        <span class="step-num">2</span>
+                                        <div>
+                                            <h5>Format Auto-Detection</h5>
+                                            <p>The app automatically parses video resolutions and durations, highlighting files under 60 seconds with a red **SHORTS** badge.</p>
+                                        </div>
+                                    </div>
+                                    <div class="step-card">
+                                        <span class="step-num">3</span>
+                                        <div>
+                                            <h5>Search & Filter</h5>
+                                            <p>Use the search bar to locate files or toggle list/grid layouts to clean up your dashboard.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab Pane 2: AI Metadata -->
+                    <div class="tour-pane" id="pane-metadata">
+                        <div class="pane-grid">
+                            <div class="pane-image-wrapper">
+                                <div class="glass-card pane-card">
+                                    <img src="assets/images/Screenshot%202026-06-22%20195625.png" alt="AI Metadata Editor Modal" class="pane-img">
+                                    <div class="glow-effect"></div>
+                                </div>
+                            </div>
+                            <div class="pane-content">
+                                <h3>AI-Powered Metadata Editor</h3>
+                                <p class="lead">Draft search-optimized titles, hashtags, and descriptions using Gemini's visual analysis models.</p>
+                                
+                                <div class="guide-steps">
+                                    <div class="step-card">
+                                        <span class="step-num">1</span>
+                                        <div>
+                                            <h5>Generate SEO Fields</h5>
+                                            <p>Click the purple **"Generate AI Details"** button. The app streams your video to Gemini to generate context-specific descriptions.</p>
+                                        </div>
+                                    </div>
+                                    <div class="step-card">
+                                        <span class="step-num">2</span>
+                                        <div>
+                                            <h5>Adjust Visibility Settings</h5>
+                                            <p>Change your publication settings (Private, Public, Unlisted) and declared age-restrictions inside custom dropdown menus.</p>
+                                        </div>
+                                    </div>
+                                    <div class="step-card">
+                                        <span class="step-num">3</span>
+                                        <div>
+                                            <h5>Custom Thumbnail Upload</h5>
+                                            <p>Upload a custom image thumbnail using the file picker to override YouTube's auto-generated frames.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab Pane 3: Smart Scheduling -->
+                    <div class="tour-pane" id="pane-schedule">
+                        <div class="pane-grid">
+                            <div class="pane-image-wrapper">
+                                <div class="glass-card pane-card">
+                                    <img src="assets/images/Screenshot%202026-06-22%20193856.png" alt="Schedule Configuration Screen" class="pane-img">
+                                    <div class="glow-effect"></div>
+                                </div>
+                            </div>
+                            <div class="pane-content">
+                                <h3>Automate Upload Timelines</h3>
+                                <p class="lead">Distribute publication dates up to 90 days out based on custom cadences and targeted upload times.</p>
+                                
+                                <div class="guide-steps">
+                                    <div class="step-card">
+                                        <span class="step-num">1</span>
+                                        <div>
+                                            <h5>Define Start Date & Time</h5>
+                                            <p>Choose the date to start publishing and standard time slots (e.g. 11:00 PM) for your posts.</p>
+                                        </div>
+                                    </div>
+                                    <div class="step-card">
+                                        <span class="step-num">2</span>
+                                        <div>
+                                            <h5>Select Publishing Cadence</h5>
+                                            <p>Pick **Daily** (1 clip per day), **Weekly**, or **Custom Intervals** (e.g. 1 clip every 3 days).</p>
+                                        </div>
+                                    </div>
+                                    <div class="step-card">
+                                        <span class="step-num">3</span>
+                                        <div>
+                                            <h5>Preview Release Calendar</h5>
+                                            <p>Review the calculated schedule slots under **Schedule Preview** and click Apply to commit the dates.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab Pane 4: Upload Queue -->
+                    <div class="tour-pane" id="pane-queue">
+                        <div class="pane-grid">
+                            <div class="pane-image-wrapper">
+                                <div class="glass-card pane-card">
+                                    <img src="assets/images/Screenshot%202026-06-22%20193909.png" alt="Upload Queue Screen" class="pane-img">
+                                    <div class="glow-effect"></div>
+                                </div>
+                            </div>
+                            <div class="pane-content">
+                                <h3>Manage Active Publishing</h3>
+                                <p class="lead">Control the background auto-upload loop, review publication statuses, and view recent history logs.</p>
+                                
+                                <div class="guide-steps">
+                                    <div class="step-card">
+                                        <span class="step-num">1</span>
+                                        <div>
+                                            <h5>Toggle Background Worker</h5>
+                                            <p>Turn on the **Background Publisher** toggle switch. The background uploader will start checking for due slots every 1 minute.</p>
+                                        </div>
+                                    </div>
+                                    <div class="step-card">
+                                        <span class="step-num">2</span>
+                                        <div>
+                                            <h5>Force Publishing</h5>
+                                            <p>Click the **"⚡ Next"** button to force-publish the next due video immediately, overriding the timer.</p>
+                                        </div>
+                                    </div>
+                                    <div class="step-card">
+                                        <span class="step-num">3</span>
+                                        <div>
+                                            <h5>Historical Performance Log</h5>
+                                            <p>Track uploads under **Recently Published** to confirm successful video IDs and upload timestamps.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab Pane 5: Creator Profile -->
+                    <div class="tour-pane" id="pane-profile">
+                        <div class="pane-grid">
+                            <div class="pane-image-wrapper">
+                                <div class="glass-card pane-card">
+                                    <img src="assets/images/Screenshot%202026-06-22%20193917.png" alt="Creator Profile Screen" class="pane-img">
+                                    <div class="glow-effect"></div>
+                                </div>
+                            </div>
+                            <div class="pane-content">
+                                <h3>Channel Statistics & Setup</h3>
+                                <p class="lead">Verify connected Google OAuth accounts, select active AI engines, and view YouTube stats.</p>
+                                
+                                <div class="guide-steps">
+                                    <div class="step-card">
+                                        <span class="step-num">1</span>
+                                        <div>
+                                            <h5>Channel Health Dashboard</h5>
+                                            <p>View real-time subscriber counts, view milestones, and total published videos synced from YouTube APIs.</p>
+                                        </div>
+                                    </div>
+                                    <div class="step-card">
+                                        <span class="step-num">2</span>
+                                        <div>
+                                            <h5>Configure AI Models</h5>
+                                            <p>Select your default translation engine (**Gemini** vs **OpenRouter**) and monitor credentials connection status.</p>
+                                        </div>
+                                    </div>
+                                    <div class="step-card">
+                                        <span class="step-num">3</span>
+                                        <div>
+                                            <h5>Disconnect Management</h5>
+                                            <p>Safely disconnect accounts. Tap **"Disconnect"** to remove tokens and wipe localized database caches instantly.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy Policy & Rules Section -->
+        <section id="privacy" class="privacy-section">
+            <div class="container legal-container">
+                <!-- Privacy Policy Card -->
+                <div class="glass-card privacy-card">
+                    <h2>Privacy Policy for YT Publisher</h2>
+                    <p class="update-date">Last Updated: June 23, 2026</p>
+                    <div class="privacy-content">
+                        <p>YT Publisher ("we", "our", or "us") operates the YT Publisher Android application. This application is completely free of charge. This policy details how our application handles, transfers, and secures user data, particularly Google User Data, when you connect your accounts.</p>
+                        
+                        <h3>1. Google API Scope Usage & Purpose</h3>
+                        <p>YT Publisher requests access to specific Google OAuth scopes to automate creators' content publishing flows. We strictly use these scopes for the following functionalities:</p>
+                        <ul>
+                            <li>
+                                <strong>https://www.googleapis.com/auth/youtube.upload</strong>: Used solely to stream video files from your local storage and upload them directly to your YouTube channel as scheduled.
+                            </li>
+                            <li>
+                                <strong>https://www.googleapis.com/auth/youtube.readonly</strong>: Used to retrieve channel analytics statistics (subscribers, views, video counts, and profile avatar) displayed in your private user dashboard.
+                            </li>
+                            <li>
+                                <strong>https://www.googleapis.com/auth/drive.file</strong>: Used to upload backups of video files to a designated folder in your own Google Drive storage. This ensures if local files are deleted, the background scheduler can fetch them from the cloud to prevent publication failures.
+                            </li>
+                        </ul>
+
+                        <h3>2. Data Processing and Local Storage</h3>
+                        <p>We believe in absolute data privacy. All operations are processed locally and securely:</p>
+                        <ul>
+                            <li><strong>Free & Ad-Free</strong>: The app is developed to be 100% free of cost, with no hidden subscriptions, in-app purchases, or ads.</li>
+                            <li><strong>Tokens & Keys</strong>: Your OAuth tokens, refresh keys, and Gemini AI API keys are stored locally on your Android device in secure, encrypted SharedPreferences storage.</li>
+                            <li><strong>No External Databases</strong>: YT Publisher does NOT upload, store, or transmit your private credentials, tokens, or video files to any third-party developer servers. All REST API requests are sent directly between your device and official Google endpoints.</li>
+                            <li><strong>Cloud Syncing</strong>: Local configuration parameters (like video names and schedules) can be mirrored optionally to your personal private Firebase Firestore document which is protected by secure user authentication rules.</li>
+                        </ul>
+
+                        <h3>3. Data Sharing & Third-Party Disclosure</h3>
+                        <p>We do not share, sell, distribute, or transfer any Google user data, API keys, or video assets to any third parties. All data remains inside your own private ecosystem (your device, your YouTube channel, and your Google Drive storage).</p>
+
+                        <h3>4. Data Deletion & Account Disconnection</h3>
+                        <p>You can revoke access to the application at any time. Clicking the **Disconnect** button inside the app settings immediately purges all local databases, cached Google tokens, and session details from your device's memory. You can also revoke access permanently through your Google Account Security Settings page.</p>
+
+                        <h3>5. Contact Details</h3>
+                        <p>If you have any questions regarding this Privacy Policy or Google API Scope usage, please contact us at: <a href="mailto:nikoorkn@gmail.com" class="contact-email">nikoorkn@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <!-- Rules & Regulations Card -->
+                <div class="glass-card privacy-card">
+                    <h2>Rules & Regulations</h2>
+                    <p class="update-date">Last Updated: June 23, 2026</p>
+                    <div class="privacy-content">
+                        <p>By downloading and using the YT Publisher Android application, you agree to comply with the following Rules and Regulations (Terms of Use). Please read them carefully.</p>
+                        
+                        <h3>1. Free & Open Use Policy</h3>
+                        <p>YT Publisher is provided to content creators completely free of charge. You may use it for personal or commercial video publishing pipelines. However, you may not repackage, re-sell, or distribute the application under a different brand name without prior consent.</p>
+
+                        <h3>2. YouTube Terms of Service Compliance</h3>
+                        <p>Since YT Publisher interacts directly with the YouTube API to publish videos, you must strictly follow YouTube's Terms of Service and Community Guidelines. Any uploads violating community standards (e.g., copyright violation, explicit content, hate speech, or harassment) are strictly the responsibility of the user.</p>
+
+                        <h3>3. Quota Limits & Fair Automation</h3>
+                        <p>To keep the platform safe and prevent account suspensions:</p>
+                        <ul>
+                            <li>Do not use the scheduler to upload spam, repetitive videos, or bulk-scale low-quality content designed to manipulate the platform's recommendation algorithms.</li>
+                            <li>Please be mindful of your daily YouTube API upload quota. YT Publisher is not responsible for API blockages, upload delays, or errors caused by exceeding your Google Cloud project limits.</li>
+                        </ul>
+
+                        <h3>4. Self-Hosted Infrastructure</h3>
+                        <p>YT Publisher operates on a serverless, local architecture. You connect your own Firebase keys and OAuth credentials. We do not provide server backups or maintain logs of your actions. If you delete local files or clear app storage without a Firebase sync setup, data cannot be recovered.</p>
+
+                        <h3>5. Disclaimer of Warranty</h3>
+                        <p>The application is provided "as is" and "as available", without warranties of any kind, either express or implied. We do not guarantee that the background scheduling or visual transcoding will be 100% error-free. We shall not be liable for any damage to your channel, loss of data, or operational downtime.</p>
+
+                        <h3>6. Queries and Support</h3>
+                        <p>For support, rule clarifications, or feedback, you can reach out to our team at: <a href="mailto:nikoorkn@gmail.com" class="contact-email">nikoorkn@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 YT Publisher. All rights reserved. Self-hosted & Open-source.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy & Rules</a>
+                <a href="#how-to-use">Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

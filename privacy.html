@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy & Terms - YT Publisher</title>
+    <meta name="description" content="Privacy Policy and Rules & Regulations for YT Publisher, an automated YouTube scheduling and AI metadata app.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <style>
+        .privacy-page-header {
+            padding-top: 140px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+        .privacy-page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .privacy-page-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        .back-home-btn {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar-container">
+        <nav class="navbar" id="navbar">
+            <div class="nav-logo">
+                <img src="assets/Gemini_Generated_Image_sib3l9sib3l9sib3.png" alt="YT Publisher Logo" class="logo-img">
+                <span class="logo-text">YT PUBLISHER</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home" class="nav-link" id="link-home">Home</a></li>
+                <li><a href="index.html#features" class="nav-link" id="link-features">Features</a></li>
+                <li><a href="index.html#how-to-use" class="nav-link" id="link-use">How to Use</a></li>
+                <li><a href="privacy.html" class="nav-link active" id="link-privacy">Privacy & Rules</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="index.html#how-to-use" class="btn btn-primary btn-sm">Get Started</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Header Section -->
+        <section class="privacy-page-header">
+            <div class="container">
+                <h1>Legal <span class="gradient-text">Documentation</span></h1>
+                <p>Please read our Privacy Policy and Rules & Regulations carefully.</p>
+            </div>
+        </section>
+
+        <!-- Privacy Policy & Rules Section -->
+        <section id="privacy" class="privacy-section" style="padding-top: 20px;">
+            <div class="container legal-container">
+                <!-- Privacy Policy Card -->
+                <div class="glass-card privacy-card">
+                    <h2>Privacy Policy for YT Publisher</h2>
+                    <p class="update-date">Last Updated: June 23, 2026</p>
+                    <div class="privacy-content">
+                        <p>YT Publisher ("we", "our", or "us") operates the YT Publisher Android application. This application is completely free of charge. This policy details how our application handles, transfers, and secures user data, particularly Google User Data, when you connect your accounts.</p>
+                        
+                        <h3>1. Google API Scope Usage & Purpose</h3>
+                        <p>YT Publisher requests access to specific Google OAuth scopes to automate creators' content publishing flows. We strictly use these scopes for the following functionalities:</p>
+                        <ul>
+                            <li>
+                                <strong>https://www.googleapis.com/auth/youtube.upload</strong>: Used solely to stream video files from your local storage and upload them directly to your YouTube channel as scheduled.
+                            </li>
+                            <li>
+                                <strong>https://www.googleapis.com/auth/youtube.readonly</strong>: Used to retrieve channel analytics statistics (subscribers, views, video counts, and profile avatar) displayed in your private user dashboard.
+                            </li>
+                            <li>
+                                <strong>https://www.googleapis.com/auth/drive.file</strong>: Used to upload backups of video files to a designated folder in your own Google Drive storage. This ensures if local files are deleted, the background scheduler can fetch them from the cloud to prevent publication failures.
+                            </li>
+                        </ul>
+
+                        <h3>2. Data Processing and Local Storage</h3>
+                        <p>We believe in absolute data privacy. All operations are processed locally and securely:</p>
+                        <ul>
+                            <li><strong>Free & Ad-Free</strong>: The app is developed to be 100% free of cost, with no hidden subscriptions, in-app purchases, or ads.</li>
+                            <li><strong>Tokens & Keys</strong>: Your OAuth tokens, refresh keys, and Gemini AI API keys are stored locally on your Android device in secure, encrypted SharedPreferences storage.</li>
+                            <li><strong>No External Databases</strong>: YT Publisher does NOT upload, store, or transmit your private credentials, tokens, or video files to any third-party developer servers. All REST API requests are sent directly between your device and official Google endpoints.</li>
+                            <li><strong>Cloud Syncing</strong>: Local configuration parameters (like video names and schedules) can be mirrored optionally to your personal private Firebase Firestore document which is protected by secure user authentication rules.</li>
+                        </ul>
+
+                        <h3>3. Data Sharing & Third-Party Disclosure</h3>
+                        <p>We do not share, sell, distribute, or transfer any Google user data, API keys, or video assets to any third parties. All data remains inside your own private ecosystem (your device, your YouTube channel, and your Google Drive storage).</p>
+
+                        <h3>4. Data Deletion & Account Disconnection</h3>
+                        <p>You can revoke access to the application at any time. Clicking the **Disconnect** button inside the app settings immediately purges all local databases, cached Google tokens, and session details from your device's memory. You can also revoke access permanently through your Google Account Security Settings page.</p>
+
+                        <h3>5. Contact Details</h3>
+                        <p>If you have any questions regarding this Privacy Policy or Google API Scope usage, please contact us at: <a href="mailto:nikoorkn@gmail.com" class="contact-email">nikoorkn@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <!-- Rules & Regulations Card -->
+                <div class="glass-card privacy-card">
+                    <h2>Rules & Regulations</h2>
+                    <p class="update-date">Last Updated: June 23, 2026</p>
+                    <div class="privacy-content">
+                        <p>By downloading and using the YT Publisher Android application, you agree to comply with the following Rules and Regulations (Terms of Use). Please read them carefully.</p>
+                        
+                        <h3>1. Free & Open Use Policy</h3>
+                        <p>YT Publisher is provided to content creators completely free of charge. You may use it for personal or commercial video publishing pipelines. However, you may not repackage, re-sell, or distribute the application under a different brand name without prior consent.</p>
+
+                        <h3>2. YouTube Terms of Service Compliance</h3>
+                        <p>Since YT Publisher interacts directly with the YouTube API to publish videos, you must strictly follow YouTube's Terms of Service and Community Guidelines. Any uploads violating community standards (e.g., copyright violation, explicit content, hate speech, or harassment) are strictly the responsibility of the user.</p>
+
+                        <h3>3. Quota Limits & Fair Automation</h3>
+                        <p>To keep the platform safe and prevent account suspensions:</p>
+                        <ul>
+                            <li>Do not use the scheduler to upload spam, repetitive videos, or bulk-scale low-quality content designed to manipulate the platform's recommendation algorithms.</li>
+                            <li>Please be mindful of your daily YouTube API upload quota. YT Publisher is not responsible for API blockages, upload delays, or errors caused by exceeding your Google Cloud project limits.</li>
+                        </ul>
+
+                        <h3>4. Self-Hosted Infrastructure</h3>
+                        <p>YT Publisher operates on a serverless, local architecture. You connect your own Firebase keys and OAuth credentials. We do not provide server backups or maintain logs of your actions. If you delete local files or clear app storage without a Firebase sync setup, data cannot be recovered.</p>
+
+                        <h3>5. Disclaimer of Warranty</h3>
+                        <p>The application is provided "as is" and "as available", without warranties of any kind, either express or implied. We do not guarantee that the background scheduling or visual transcoding will be 100% error-free. We shall not be liable for any damage to your channel, loss of data, or operational downtime.</p>
+
+                        <h3>6. Queries and Support</h3>
+                        <p>For support, rule clarifications, or feedback, you can reach out to our team at: <a href="mailto:nikoorkn@gmail.com" class="contact-email">nikoorkn@gmail.com</a></p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <a href="index.html" class="btn btn-secondary back-home-btn">
+                        <span class="material-icons-round btn-icon">arrow_back</span> Back to Homepage
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 YT Publisher. All rights reserved. Self-hosted & Open-source.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy & Rules</a>
+                <a href="index.html#how-to-use">Support</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
